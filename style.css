@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p,
+label {
+    font-family: 'Poppins', sans-serif;
+}
+
+h3,
+h1,
+a {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 20px 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav span:nth-child(1) {
+    width: 150px;
+    height: 100px;
+}
+
+nav span:nth-child(2) a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #0c6d43;
+    padding: 10px 20px;
+    border: 1px solid #0c6d43;
+    border-radius: 10px;
+}
+
+nav span:nth-child(2) a:hover {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #0c6d43;
+    border-radius: 10px;
+    background: rgba(3, 43, 3, 0.226);
+}
+
+.hypeLogo {
+    width: 100%;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container .leftSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.container .leftSection h1 {
+    font-size: 4rem;
+    margin-bottom: 13px;
+}
+
+.container .leftSection p {
+    margin-bottom: 13px;
+}
+
+.container .leftSection h3 {
+    margin: 15px 0;
+}
+
+.container .leftSection form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.container .leftSection form label {
+    color: #222222a2;
+}
+
+.container .leftSection form span {
+    display: inline-block;
+    grid-template: 0;
+    position: relative;
+    margin: 0;
+    border: none;
+    /* border: 2px solid #0c6d43; */
+    width: 484px;
+    border-radius: 10px;
+}
+
+.container .leftSection form span input {
+    color: #222222a2;
+    padding: 18px;
+    width: 300px;
+    background: #eab9c8;
+    border-left: 2px solid #0c6d43;
+    border-top: 2px solid #0c6d43;
+    border-bottom: 2px solid #0c6d43;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.container .leftSection form span input:focus {
+    outline: none;
+    background: #58474c44;
+    border-left: 2px solid #0c6d4363;
+    border-top: 2px solid #0c6d4363;
+    border-bottom: 2px solid #0c6d4363;
+}
+
+.container .leftSection form span button {
+    margin: 0;
+    border: none;
+    position: absolute;
+    width: 180px;
+    padding: 14px;
+    font-size: 20px;
+    color: white;
+    background: #0c6d43;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-right: 2px solid #0c6d43;
+    border-top: 2px solid #0c6d43;
+    border-bottom: 2px solid #0c6d43;
+}
+
+.container .leftSection form span button:hover {
+    background: #0c6d4363;
+    cursor: pointer;
+}
+
+.container .leftSection span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    column-gap: 20px;
+}
+
+.container .leftSection span img {
+    width: 30px;
+}
+
+.container .leftSection span img:hover {
+    transform: scale(1.2);
+}
+
+.container .rightSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .rightSection img {
+    width: 80%;
+    transition: 1s;
+}
+
+.container .rightSection img:hover {
+    transform: scale(1.1);
+}
+
+body::-webkit-scrollbar {
+    width: .5em;
+    height: .5em;
+}
+
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px #042718;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #0c6d43;
+    outline: 1px solid #0c6d43;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #042718;
+}
+
+@media only screen and (max-width: 768px) {
+    nav span:nth-child(1) {
+        width: 150px;
+        height: 100px;
+    }
+
+    .hypeLogo{
+        width: 80%;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .container .leftSection h1 {
+        font-size: 1.9rem;
+    }
+
+
+    .container .leftSection form span {
+
+        width: 200px;
+    }
+
+    .container .leftSection form span input {
+        width: 150px;
+        padding: 15px;
+    }
+
+
+    .container .leftSection form span button {
+        font-size: 15px;
+        width: 100px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+    .container .leftSection h1 {
+        font-size: 2.9rem;
+    }
+
+}
